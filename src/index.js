@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './styles/raptorize.css';
-import raptor from './assets/images/raptor.png';
-import sound1 from './assets/sounds/raptor.mp3';
-import sound2 from './assets/sounds/raptor.ogg';  // backup
+import './styles/macronize.css';
+import macron from './assets/images/macron.png';
+import yell from './assets/sounds/macron.mp3';
 
 const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 const defaults = {
-  audioPath: [sound1, sound2],
-  imagePath: raptor,
+  audioPath: [yell],
+  imagePath: macron,
 
   soundDelay: 500,
   sound: true,
@@ -49,13 +48,13 @@ const init = (options) => {
       while (assets[0]) {
         assets[0].parentNode.removeChild(assets[0]);
       }
-    }, 5000);
+    }, 8000);
   }
 
   return { go: go }
 }
 
-const Raptorize = (props) => {
+const Macronize = (props) => {
   const [index, setIndex] = useState(0);
 
   const options = { ...defaults, ...props };
@@ -83,4 +82,4 @@ const Raptorize = (props) => {
   </>);
 };
 
-export default Raptorize;
+export default Macronize;

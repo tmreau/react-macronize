@@ -6,11 +6,11 @@ import '@testing-library/jest-dom'
 
 import * as React from 'react'
 import {render, fireEvent, screen} from '@testing-library/react'
-import Raptorize from '../index'
+import Macronize from '../index'
 
 test('it displays the konami code if the code prop is true', () => {
   const konamiCodeMessage = /↑ ↑ ↓ ↓ ← → ← → B A/i;
-  render(<Raptorize soundDelay={500} sound repeat code />);
+  render(<Macronize soundDelay={500} sound repeat code />);
 
   // query* functions will return the element or null if it cannot be found
   // get* functions will return the element or throw an error if it cannot be found
